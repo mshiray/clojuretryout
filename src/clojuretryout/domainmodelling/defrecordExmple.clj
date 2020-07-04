@@ -1,8 +1,9 @@
 ;define namespace
-(ns com.clojuretryout.domailmodelling)
+(ns com.clojuretryout.domainmodelling)
 
 ;define enum type with keyword
 {:RETAIL 0 , :CORP 1}
+
 ;defining composite data types as records
 ;TODO: Move it to separate file
 (defrecord Address [street city state zip])
