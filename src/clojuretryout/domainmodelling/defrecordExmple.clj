@@ -1,5 +1,5 @@
 ;define namespace
-(ns com.clojure.domailmodel)
+(ns com.clojuretryout.domailmodelling)
 
 ;define enum type with keyword
 {:RETAIL 0 , :CORP 1}
