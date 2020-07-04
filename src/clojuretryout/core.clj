@@ -6,6 +6,8 @@
   [& args]
   (println "Hello, World!" args))
 
+;simple function to accept string param and print hello
+;msg on console
 (defn sayHello [name]
    (println "Hello " name)
   )
