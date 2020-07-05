@@ -62,9 +62,7 @@
 ;; => {3 :c, 2 :b, 1 :a}
 
 
-
-
-;heterogeneous keys
+;heterogeneous type keys
 (
 
  let [m {
@@ -121,7 +119,7 @@
  (array-map :a 1, :b 2, :c 3)
 ;; => {:a 1, :b 2, :c 3}
 
-;vs. the lack of insertion order guaranty
+;vs. the lack of insertion order guaranty in hash-map
 (hash-map :a 1, :b 2, :c 3)
 ;; => {:c 3, :b 2, :a 1}
 
