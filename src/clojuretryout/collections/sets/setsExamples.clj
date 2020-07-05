@@ -1,29 +1,44 @@
 
 (ns com.clojuretryout.collections.sets
   (:require clojure.set) ;has intersection, union , difference functions
-  )
-;Sets
+)
 
 (def s #{:a :b :c})
+;; => #'com.clojuretryout.collections.sets/s
+
 
 (s :c)
-(s :d) ; returns nil
+;; => :c
+
+(s :d)
+;; => nil
+
 
 (#{1 2 3 4 5} 3) ;matches 3 in defined set
+;; => 3
 
-(get #{10 20 30 40} 60 0) ; get 0 if 60 not found
+
+(get #{10 20 30 40} 60 0)  ; get 0 if 60 not found
+;; => 0
+
 
 (into #{[1 2 3]} '[(1 2 3)])
 
 (sorted-set 2 4 5 6 3) ; returns sorted set
 
-(contains? #{1 2 4 3} 4) ; returns true for set but false for vector
+(contains? #{1 2 4 3} 4) ; returns true for set r
+(contains? [1 2 3 4] 4) ;but false for vector
 
-(clojure.set/intersection #{:humans :fruit-bats :zombies}
-                          #{:chupacabra :zombies :humans})
+(clojure.set/intersection #{ 1 2 3 4 5 6 7 8 9 10 }
+                          #{ 2 4 6 8 10})
+                          ;; => #{4 6 2 10 8}
 
-(clojure.set/union #{:pez :gum :dots :skor}
-                   #{:pez :skor :pocky}
-                   #{:pocky :gum :skor})
 
-(clojure.set/difference #{1 2 3 4} #{3 4 5 6}) ;returns #{1,2}
+(clojure.set/union #{1 2 3 4 5 6 7 8 9 10}
+                   #{3 5 7 100}
+                   #{1 10 12})
+;; => #{7 1 4 100 6 3 12 2 9 5 10 8}
+
+
+(clojure.set/difference #{1 2 3 4} #{3 4 5 6})
+;; => #{1 2}
