@@ -77,22 +77,30 @@
 (derive ::osx ::unix)
 ;; => nil
 
+;if diamond problem encountered, preferred method can be specified
+(prefer-method home ::unix ::bsd)
+;; => #multifn[home 0x23173c15]
+
 (home osx)
 ;; => "/Users"
 
 ;Query the derivation heirarchy
 
 (parents ::osx)
-;=> #{:user/unix}
-;
+;; => #{:joy.udp/unix}
+
+
 (ancestors ::osx)
-;=> #{:user/unix}
+;; => #{:joy.udp/unix}
+
 
 (descendants ::unix)
-;=> #{:user/osx}
+;; => #{:joy.udp/osx}
+
 
 (isa? ::osx ::unix)
-;=> true
+;; => true
+
 
 (isa? ::unix ::osx)
-;=> false
+;; => false
