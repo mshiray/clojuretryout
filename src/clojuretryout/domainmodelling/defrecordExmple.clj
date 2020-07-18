@@ -12,7 +12,6 @@
 (defrecord Customer [fname lname email phone type address])
 ;; => com.clojuretryout.domainmodelling.Customer
 
-
 ;create an instance of record
 (def terminator (Customer. "Arny" "T2" "AT2@skynet.com" 111110011 :CORP
                   (Address. "Hasta La Vista Road" "LA" "CA" 345612)))
