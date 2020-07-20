@@ -45,10 +45,6 @@
 (:fname terminator1)
 ;; => "Arny"
 
-
-
-
-
 ;protocols
 
 (defprotocol NPrinter
@@ -68,6 +64,19 @@
 ;;left Node: 25
 ;;right Node: 12
 
+
+;deftype example which do not implement any other methods
+;but only implements Iseq.seq method
+
+(deftype InfiniteConstant [i]
+  clojure.lang.ISeq
+  (seq [this]
+    (lazy-seq (cons i (seq this)))))
+;; => com.clojuretryout.domainmodelling.trp.InfiniteConstant
+
+
+(take 3 (InfiniteConstant. 5))
+;; => (5 5 5)
 
 
 
