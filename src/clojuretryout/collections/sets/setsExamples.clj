@@ -27,7 +27,7 @@
 (sorted-set 2 4 5 6 3) ; returns sorted set
 
 (contains? #{1 2 4 3} 4) ; returns true for set r
-(contains? [1 2 3 4] 4) ;but false for vector
+(contains? [1 2 3 4 5] 4) ;but false for vector
 
 (clojure.set/intersection #{ 1 2 3 4 5 6 7 8 9 10 }
                           #{ 2 4 6 8 10})
