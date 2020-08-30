@@ -13,3 +13,4 @@ pom.xml.asc
 .calva/output-window/.clj-kondo/config.edn
 .calva/output-window/output.repl
 .calva/output-window/.clj-kondo/.cache/2020.07.29/lock
+.calva/output-window/output.calva-repl
